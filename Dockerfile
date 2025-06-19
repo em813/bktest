@@ -1,5 +1,5 @@
 FROM ubuntu:22.04
 
-COPY ./abcd /root/abcd
+RUN --mount=type=bind,target=/root/aaaa,source=./abcd,rw ls -alh /root && cat /root/aaaa
 
-RUN cat /root/abcd
+# RUN cat /root/abcd
